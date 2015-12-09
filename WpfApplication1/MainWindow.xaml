@@ -1,0 +1,20 @@
+﻿<Window x:Class="WpfApplication1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Canvas x:Name="Canvas1" Grid.Row="0" MouseMove="OnMouseMove" MouseDown="OnMouseDown" Background="White" Grid.ColumnSpan="2" MouseUp="OnMouseUp">
+            <Rectangle/>
+        </Canvas>
+
+        <StackPanel HorizontalAlignment="Left"  Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" Height="73" VerticalAlignment="Top" Width="79">
+            <!--<Button x:Name="ButtonDel"  Content="Удалить"  Width="80" Height="25" VerticalAlignment="Top" Click="ButtonDel_Click" Margin="10,59,427,0" Background="{x:Null}" />-->
+            <RadioButton GroupName="figure" IsChecked="True" Checked="RadioFigure_Checked">Фигура</RadioButton>
+            <RadioButton GroupName="figure" Checked="RadioFigure_Checked">Линия</RadioButton>
+            <RadioButton GroupName="type" IsChecked="True" Checked="RadioType_Checked">Обычная</RadioButton>
+            <RadioButton GroupName="type" Checked="RadioType_Checked">Пунктир</RadioButton>
+        </StackPanel>
+
+
+    </Grid>
+</Window>
